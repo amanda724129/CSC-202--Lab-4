@@ -16,8 +16,16 @@ class BinarySearchTree:
     comes_before: Callable[[Any, Any], bool]
     tree: BinTree
 
+class Point2:
+    def __init__(self, x, y):
+        self.x = x
+        self.y = y
+
 def less_than(a: Any, b: Any) -> bool:
     return a < b
+
+def point_less_than(a: Point2, b: Point2) -> bool:
+    return (a.x**2 + a.y**2) < (b.x**2 + b.y**2)
 
 def is_empty(bst: BinarySearchTree) -> bool:
     if bst.tree is None:
