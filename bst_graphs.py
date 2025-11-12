@@ -11,6 +11,8 @@ sys.setrecursionlimit(10**6)
 from bst import *
 TREES_PER_RUN : int = 10000
 
+
+#Section 3.2
 def build_bst(N: int) -> BinarySearchTree:
     tree = BinarySearchTree(less_than, None)
     if N <= 0:
